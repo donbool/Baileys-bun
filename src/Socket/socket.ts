@@ -59,7 +59,7 @@ import {
 } from '../WABinary'
 import { BinaryInfo } from '../WAM/BinaryInfo.js'
 import { USyncQuery, USyncUser } from '../WAUSync/'
-import { WebSocketClient } from './Client'
+import { makeSocketClient } from './Client'
 import { executeWMexQuery } from './mex.js'
 
 /**
@@ -133,7 +133,7 @@ export const makeSocket = (config: SocketConfig) => {
 		routingInfo: authState?.creds?.routingInfo
 	})
 
-	const ws = new WebSocketClient(url, config)
+	const ws = makeSocketClient(url, config)
 
 	ws.connect()
 
