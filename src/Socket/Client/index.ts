@@ -1,7 +1,7 @@
-import { URL } from 'url'
+import type { URL } from 'url'
 import type { SocketConfig } from '../../Types'
 import { BunWebSocketClient } from './bun-websocket'
-import { AbstractSocketClient } from './types'
+import type { AbstractSocketClient } from './types'
 import { WebSocketClient } from './websocket'
 
 export * from './types'
